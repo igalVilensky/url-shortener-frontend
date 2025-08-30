@@ -1,76 +1,80 @@
-# Nuxt Minimal Starter
+🌐 URL Shortener Frontend
+A sleek and modern frontend for the URL Shortener project, built with Nuxt 3 and Tailwind CSS. It connects to a Node.js + Express + MongoDB Atlas backend hosted on Render.
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+🚀 Features
 
-## Setup
+🔗 Shorten URLs: Input any long URL to get a compact, shareable link.
+📋 Easy Copy: Copy shortened URLs with a single click.
+📊 View Stats: Track click statistics for all shortened links.
+📱 Responsive Design: Mobile-friendly UI powered by Tailwind CSS.
 
-Make sure to install dependencies:
+🛠️ Tech Stack
 
-```bash
-# npm
+Technology
+Description
+
+Nuxt 3
+Vue.js framework for SSR and static sites
+
+Tailwind CSS
+Utility-first CSS framework for styling
+
+Backend API
+Node.js + Express + MongoDB Atlas on Render
+
+Netlify
+Hosting platform for the frontend
+
+⚙️ Project Setup
+Prerequisites
+
+Node.js: v16 or higher
+npm: Package manager
+Git: Version control
+
+Installation
+
+Clone the repository
+git clone https://github.com/igalVilensky/url-shortener-frontend.git
+cd url-shortener-frontend
+
+Install dependencies
 npm install
 
-# pnpm
-pnpm install
+Configure API URLCreate a .env file in the root directory:
+NUXT_PUBLIC_API_URL=https://url-shortener-lzgh.onrender.com
 
-# yarn
-yarn install
+Replace with your actual backend API URL.
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+Run locally
 npm run dev
 
-# pnpm
-pnpm dev
+Open http://localhost:3000 in your browser.
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
+Build for production
 npm run build
 
-# pnpm
-pnpm build
+🌍 Deployment (Netlify)
 
-# yarn
-yarn build
+Push your code to a GitHub repository.
+Go to Netlify and select New site from Git.
+Connect your GitHub repository.
+Configure build settings:
+Build command: npm run build
+Publish directory: .output/public
 
-# bun
-bun run build
-```
+Add the environment variable in Netlify:
+Key: NUXT_PUBLIC_API_URL
+Value: https://url-shortener-lzgh.onrender.com (or your backend URL)
 
-Locally preview production build:
+Deploy the site to get a live URL! 🎉
 
-```bash
-# npm
-npm run preview
+📸 Demo
 
-# pnpm
-pnpm preview
+Backend API: Render Service
+Frontend App: Netlify Live Site (Update with your Netlify URL)
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# url-shortener-frontend
+📝 License
+This project is licensed under the MIT License.
+🙌 Contributing
+Contributions are welcome! Please open an issue or submit a pull request on GitHub.
