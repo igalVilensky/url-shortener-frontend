@@ -302,7 +302,7 @@
                         <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
                       </div>
                       <a
-                        :href="`http://localhost:5000/${url.shortId}`"
+                        :href="`https://url-shortener-lzgh.onrender.com/${url.shortId}`"
                         target="_blank"
                         class="font-mono text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium"
                       >
@@ -558,7 +558,7 @@ const shortenUrl = async () => {
   error.value = "";
 
   try {
-    const res = await fetch("http://localhost:5000/shorten", {
+    const res = await fetch("https://url-shortener-lzgh.onrender.com/shorten", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ longUrl: longUrl.value }),
@@ -590,7 +590,7 @@ const shortenUrl = async () => {
 const fetchStats = async () => {
   isRefreshing.value = true;
   try {
-    const res = await fetch("http://localhost:5000/stats");
+    const res = await fetch("https://url-shortener-lzgh.onrender.com/stats");
     if (!res.ok) {
       throw new Error("Failed to fetch statistics");
     }
@@ -622,7 +622,7 @@ const copyToClipboard = async () => {
 };
 
 const copyShortUrl = async (shortId) => {
-  const fullUrl = `http://localhost:5000/${shortId}`;
+  const fullUrl = `https://url-shortener-lzgh.onrender.com/${shortId}`;
   try {
     await navigator.clipboard.writeText(fullUrl);
     showToastMessage("Short URL copied to clipboard!");
